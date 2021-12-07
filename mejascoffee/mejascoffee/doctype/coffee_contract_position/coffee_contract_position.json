@@ -1,0 +1,164 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2021-12-07 10:27:49.822750",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "coffee_contract",
+  "contract_number",
+  "column_break_3",
+  "supplier",
+  "due_date_of_contract",
+  "contract_position_details_section",
+  "origin",
+  "region",
+  "amount_of_bags",
+  "column_break_11",
+  "kg_per_bag",
+  "price_per_kg",
+  "amount_of_kg",
+  "total_value",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "coffee_contract",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Coffee Contract",
+   "options": "Coffee Contract",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "coffee_contract.contract_number",
+   "fieldname": "contract_number",
+   "fieldtype": "Read Only",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Contract Number"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "coffee_contract.supplier",
+   "fieldname": "supplier",
+   "fieldtype": "Read Only",
+   "label": "Supplier"
+  },
+  {
+   "fetch_from": "coffee_contract.due_date_of_contract",
+   "fieldname": "due_date_of_contract",
+   "fieldtype": "Read Only",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Due Date of Contract"
+  },
+  {
+   "fieldname": "contract_position_details_section",
+   "fieldtype": "Section Break",
+   "label": "Contract Position Details"
+  },
+  {
+   "fieldname": "origin",
+   "fieldtype": "Data",
+   "label": "Origin",
+   "reqd": 1
+  },
+  {
+   "fieldname": "region",
+   "fieldtype": "Data",
+   "label": "Region",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amount_of_bags",
+   "fieldtype": "Int",
+   "label": "Amount of Bags",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_11",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "kg_per_bag",
+   "fieldtype": "Int",
+   "label": "Kg Per Bag",
+   "precision": "2",
+   "reqd": 1
+  },
+  {
+   "fieldname": "price_per_kg",
+   "fieldtype": "Currency",
+   "label": "Price Per Kg",
+   "options": "Company:company:default_currency",
+   "reqd": 1
+  },
+  {
+   "description": "Amount of Bags * Kg per Bag",
+   "fieldname": "amount_of_kg",
+   "fieldtype": "Read Only",
+   "label": "Amount of Kg"
+  },
+  {
+   "description": "Amount of Kg * Price per Kg",
+   "fieldname": "total_value",
+   "fieldtype": "Currency",
+   "label": "Total Value",
+   "options": "Company:company:default_currency",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Coffee Contract Position",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Series",
+   "options": "CCP.-.YY.-.MM.-.DD.-.#####",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2021-12-07 11:23:45.609638",
+ "modified_by": "Administrator",
+ "module": "Mejascoffee",
+ "name": "Coffee Contract Position",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "supplier, contract_number",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "supplier",
+ "track_changes": 1
+}
