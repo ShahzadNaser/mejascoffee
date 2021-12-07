@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include mejascoffee *.css
+recursive-include mejascoffee *.csv
+recursive-include mejascoffee *.html
+recursive-include mejascoffee *.ico
+recursive-include mejascoffee *.js
+recursive-include mejascoffee *.json
+recursive-include mejascoffee *.md
+recursive-include mejascoffee *.png
+recursive-include mejascoffee *.py
+recursive-include mejascoffee *.svg
+recursive-include mejascoffee *.txt
+recursive-exclude mejascoffee *.pyc
